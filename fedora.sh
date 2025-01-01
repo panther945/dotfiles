@@ -6,7 +6,7 @@ sudo dnf install -y zoxide fzf eza ripgrep fd-find stow
 echo "Installing tmux"
 sudo dnf install -y tmux
 stow tmux
-git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "Installing Oh-My-Zsh"
 sudo dnf install -y zsh curl
