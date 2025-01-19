@@ -1,0 +1,24 @@
+-- return {
+-- "coffebar/neovim-project",
+-- opts = {
+--   projects = { -- define project roots
+--     "~/works/cloud/cloud-project/*",
+--     "~/works/game/*",
+--   },
+--   -- dashboard_mode = true,
+--   last_session_on_startup = false,
+-- },
+-- init = function()
+--   -- enable saving the state of plugins in the session
+--   vim.opt.sessionoptions:append("globals") -- save global variables that start with an uppercase letter and contain at least one lowercase letter.
+-- end,
+-- dependencies = {
+--   { "Shatur/neovim-session-manager" },
+-- },
+-- keys = {
+--   { "<leader>fp", "<CMD>Telescope neovim-project discover<CR>", desc = "Find a project" },
+--   { "<leader>fh", "<CMD>Telescope neovim-project history<CR>", desc = "Find a project from history" },
+-- },
+-- lazy = false,
+-- priority = 100,
+-- }
