@@ -68,8 +68,8 @@ preset = 'qwerty'
 A = '^built-in retina display$' # Case insensitive regex match
 
 [gaps]
-inner.horizontal = 0
-inner.vertical = 0
+inner.horizontal = 8
+inner.vertical = 8
 outer.left = 8
 outer.bottom = 8
 outer.top = 8
