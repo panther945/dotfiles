@@ -82,4 +82,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+abbr -a gco git checkout
+abbr -a gst git status
+
 zoxide init fish | source

@@ -3,6 +3,7 @@ font-size=16
 window-width = 180
 window-height = 45
 window-padding-x = 4
+window-padding-y = 4
 
 cursor-style = block
 cursor-style-blink = false
@@ -12,3 +13,5 @@ theme = catppuccin-mocha
 
 confirm-close-surface = false
 clipboard-paste-protection = false
+
+window-decoration = none
