@@ -3,8 +3,7 @@ local act = wezterm.action
 local config = wezterm.config_builder()
 local mux = wezterm.mux
 
-local workspace_switcher = wezterm.plugin.require("https://github.com/MLFlexer/smart_workspace_switcher.wezterm")
-
+-- local workspace_switcher = wezterm.plugin.require("https://github.com/MLFlexer/smart_workspace_switcher.wezterm")
 wezterm.on("gui-startup", function(cmd)
 	local _, _, window = mux.spawn_window(cmd or {})
 	window:gui_window():maximize()
@@ -34,6 +33,16 @@ config.window_close_confirmation = "NeverPrompt"
 
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	config.default_domain = "WSL:Debian"
+end
+
+config.keys = {}
+
+for i = 1, 9 do
+	table.insert(config.keys, {
+		key = tostring(i),
+		mods = "CMD",
+		action = act.SendKey({ key = tostring(i), mods = "ALT" }),
+	})
 end
 
 local function is_vim(pane)
@@ -69,36 +78,36 @@ local function split_nav(resize_or_move, key)
 	}
 end
 
-config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
-config.keys = {
-	{
-		key = "|",
-		mods = "LEADER",
-		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-	},
-	{
-		key = "-",
-		mods = "LEADER",
-		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
-	},
-	{
-		key = "p",
-		mods = "LEADER",
-		action = workspace_switcher.switch_workspace({ extra_args = " | rg -Fxf ~/works" }),
-	},
-	-- move between split panes
-	split_nav("move", "h"),
-	split_nav("move", "j"),
-	split_nav("move", "k"),
-	split_nav("move", "l"),
-	-- -- -- resize panes
-	split_nav("resize", "h"),
-	split_nav("resize", "j"),
-	split_nav("resize", "k"),
-	split_nav("resize", "l"),
-}
+-- config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
+-- config.keys = {
+-- 	{
+-- 		key = "|",
+-- 		mods = "LEADER",
+-- 		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+-- 	},
+-- 	{
+-- 		key = "-",
+-- 		mods = "LEADER",
+-- 		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+-- 	},
+-- 	{
+-- 		key = "p",
+-- 		mods = "LEADER",
+-- 		action = workspace_switcher.switch_workspace({ extra_args = " | rg -Fxf ~/works" }),
+-- 	},
+-- 	-- move between split panes
+-- 	split_nav("move", "h"),
+-- 	split_nav("move", "j"),
+-- 	split_nav("move", "k"),
+-- 	split_nav("move", "l"),
+-- 	-- -- -- resize panes
+-- 	split_nav("resize", "h"),
+-- 	split_nav("resize", "j"),
+-- 	split_nav("resize", "k"),
+-- 	split_nav("resize", "l"),
+-- }
 
-workspace_switcher.zoxide_path = "/opt/homebrew/bin/zoxide"
-workspace_switcher.apply_to_config(config)
+-- workspace_switcher.zoxide_path = "/opt/homebrew/bin/zoxide"
+-- workspace_switcher.apply_to_config(config)
 
 return config
