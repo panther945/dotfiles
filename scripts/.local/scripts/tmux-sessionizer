@@ -3,7 +3,8 @@
 if [[ $# -eq 1 ]]; then
   selected=$1
 else
-  selected=$((tmux list-session -F '#S'; fd . ~/projects ~/works/cloud/cloud-project ~/works/game/game-project \
+  selected=$((tmux list-session -F '#S'; fd . ~/projects ~/works/cloud/cloud-project \
+  ~/works/game/game-project/backend ~/works/game/game-project/frontend \
   ~/works/tgg-project/backend ~/works/tgg-project/frontend \
     --min-depth 1 --max-depth 1 -t d) | fzf --tmux --reverse)
 fi
