@@ -13,12 +13,7 @@ set -U fish_greeting
 set -x MANROFFOPT -c
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
-# Add ~/.local/bin to PATH
-if test -d ~/.local/bin
-    if not contains -- ~/.local/bin $PATH
-        set -p PATH ~/.local/bin
-    end
-end
+fish_add_path ~/.local/bin ~/.local/scripts
 
 ## Functions
 # Functions needed for !! and !$ https://github.com/oh-my-fish/plugin-bang-bang
@@ -59,9 +54,6 @@ function backup --argument filename
     cp $filename $filename.bak
 end
 
-# Cleanup orphaned packages
-alias cleanup='sudo pacman -Rns (pacman -Qtdq)'
-
 ## Useful aliases
 # Replace ls with eza
 alias ls='eza -al --color=always --group-directories-first --icons' # preferred listing
@@ -81,6 +73,9 @@ alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
+# bind
+bind \cs tmux-sessionizer
 
 abbr -a gco git checkout
 abbr -a gst git status

@@ -13,5 +13,3 @@ theme = catppuccin-mocha
 
 confirm-close-surface = false
 clipboard-paste-protection = false
-
-window-decoration = none
