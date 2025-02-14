@@ -1,5 +1,6 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+    set fish_tmux_default_session_name home
+    set fish_tmux_autostart true
 end
 
 # hydro
