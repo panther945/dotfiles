@@ -12,6 +12,7 @@ curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fi
 
 ```console
 fisher install IlanCosman/tide@v6
+fisher install jorgebucaran/hydro
 ```
 
 ### docker
