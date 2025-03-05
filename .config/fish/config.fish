@@ -7,16 +7,13 @@ if status is-interactive
     set fish_tmux_autostart true
 end
 
-# pure
-set -g async_prompt_functions _pure_prompt_git
-
 # hydro
-set -g hydro_color_pwd f5c2e7
-set -g hydro_color_git b4befe
-set -g hydro_color_prompt a6e3a1
+#set -g hydro_color_pwd f5c2e7
+#set -g hydro_color_git b4befe
+#set -g hydro_color_prompt a6e3a1
 set -g hydro_multiline true
 set -g hydro_symbol_git_dirty "*"
-set -g hydro_symbol_prompt ❯
+set -g hydro_symbol_prompt "❯❯"
 set -g hydro_cmd_duration_threshold 5000
 
 #set LANG en_US.UTF-8
