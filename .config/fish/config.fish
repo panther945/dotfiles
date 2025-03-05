@@ -7,6 +7,9 @@ if status is-interactive
     set fish_tmux_autostart true
 end
 
+# pure
+set -g async_prompt_functions _pure_prompt_git
+
 # hydro
 set -g hydro_color_pwd f5c2e7
 set -g hydro_color_git b4befe
