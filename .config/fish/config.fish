@@ -8,9 +8,9 @@ if status is-interactive
 end
 
 # hydro
-#set -g hydro_color_pwd f5c2e7
-#set -g hydro_color_git b4befe
-#set -g hydro_color_prompt a6e3a1
+set -g hydro_color_pwd $fish_color_cwd
+set -g hydro_color_git $fish_color_grey
+set -g hydro_color_prompt $fish_color_user
 set -g hydro_multiline true
 set -g hydro_symbol_git_dirty "*"
 set -g hydro_symbol_prompt "❯❯"
