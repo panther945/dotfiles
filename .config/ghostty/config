@@ -14,5 +14,4 @@ theme = catppuccin-mocha
 confirm-close-surface = false
 clipboard-paste-protection = false
 
-fullscreen=true
-macos-non-native-fullscreen=visible-menu
+maximize=true
