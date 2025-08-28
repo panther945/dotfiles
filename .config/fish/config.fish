@@ -26,7 +26,7 @@ set -U fish_greeting
 # Format man pages
 set -x MANROFFOPT -c
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
-set -x GOPATH $HOME/go
+set -x -U GOPATH $HOME/go
 set -x PATH $PATH $GOPATH/bin
 
 fish_add_path ~/.local/bin ~/.local/scripts ~/.nbgos/bin
