@@ -16,6 +16,8 @@ set -g hydro_symbol_git_dirty "*"
 set -g hydro_symbol_prompt "❯❯"
 set -g hydro_cmd_duration_threshold 5000
 
+set --universal pure_check_for_new_release false
+
 #set LANG en_US.UTF-8
 set -U fish_greeting
 
@@ -60,9 +62,12 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # bind
-bind \cs tmux-sessionizer
+# bind \cs tmux-sessionizer
 
 abbr -a gco git checkout
 abbr -a gst git status
+
+# Set up fzf key bindings
+fzf --fish | source
 
 zoxide init fish | source
