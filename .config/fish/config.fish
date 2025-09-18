@@ -17,6 +17,7 @@ set -g hydro_symbol_prompt "❯❯"
 set -g hydro_cmd_duration_threshold 5000
 
 set --universal pure_check_for_new_release false
+set --universal pure_enable_container_detection false
 
 #set LANG en_US.UTF-8
 set -U fish_greeting
