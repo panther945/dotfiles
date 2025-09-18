@@ -97,6 +97,7 @@ alias egrep='egrep --color=auto'
 
 abbr -a gco git checkout
 abbr -a gst git status
+abbr -a lg lazygit
 
 # Set up fzf key bindings
 fzf --fish | source
