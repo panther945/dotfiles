@@ -8,16 +8,16 @@ if status is-interactive
 end
 
 # hydro
-set -g hydro_color_pwd $fish_color_cwd
-set -g hydro_color_git $fish_color_grey
-set -g hydro_color_prompt $fish_color_user
-set -g hydro_multiline true
-set -g hydro_symbol_git_dirty "*"
-set -g hydro_symbol_prompt "❯❯"
-set -g hydro_cmd_duration_threshold 5000
+# set -g hydro_color_pwd $fish_color_cwd
+# set -g hydro_color_git $fish_color_grey
+# set -g hydro_color_prompt $fish_color_user
+# set -g hydro_multiline true
+# set -g hydro_symbol_git_dirty "*"
+# set -g hydro_symbol_prompt "❯❯"
+# set -g hydro_cmd_duration_threshold 5000
 
-set --universal pure_check_for_new_release false
-set --universal pure_enable_container_detection false
+# set --universal pure_check_for_new_release false
+# set --universal pure_enable_container_detection false
 
 #set LANG en_US.UTF-8
 set -U fish_greeting
@@ -30,9 +30,9 @@ set -U fish_greeting
 set -x MANROFFOPT -c
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 set -x -U GOPATH $HOME/go
-set -x PATH $PATH $GOPATH/bin
+# set -x PATH $PATH $GOPATH/bin
 
-fish_add_path ~/.local/bin ~/.local/scripts ~/.nbgos/bin
+fish_add_path ~/.local/bin ~/.local/scripts ~/.nbgos/bin $GOPATH/bin
 
 # Functions needed for !! and !$ https://github.com/oh-my-fish/plugin-bang-bang
 function __history_previous_command
