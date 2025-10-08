@@ -3,7 +3,14 @@
 if [[ $# -eq 1 ]]; then
   selected=$1
 else
-  selected=$((tmux list-session -F '#S'; zoxide query --list) | fzf --tmux --reverse)
+  # 獲取當前的 TMUX session 名稱，如果存在的話
+  current_session=$(tmux display-message -p '#S' 2>/dev/null)
+  
+  # 透過 grep -v 排除當前 session
+  selected=$(( \
+    tmux list-session -F '#S' | grep -v "^$current_session$" ; \
+    zoxide query --list \
+  ) | fzf --tmux --reverse)
 fi
 
 if [[ -z $selected ]]; then

@@ -7,6 +7,10 @@
 # Zsh configuration
 # -----------------
 
+if [[ ! $TMUX ]]; then
+  tmux new -A -s home
+fi
+
 #
 # Path
 #
