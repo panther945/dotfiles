@@ -6,6 +6,7 @@
 # -----------------
 # Zsh configuration
 # -----------------
+export LANG=en_US.UTF-8
 
 # eval "$(starship init zsh)"
 
