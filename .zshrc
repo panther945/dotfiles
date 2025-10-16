@@ -18,7 +18,7 @@ export LANG=en_US.UTF-8
 # Path
 #
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin:$HOME/.local/bin:$HOME/.nbgos/bin
+export PATH=$PATH:$GOPATH/bin:$HOME/.local/bin:$HOME/.nbgos/bin:$HOME/.npm-global/bin
 
 #
 # Alias
