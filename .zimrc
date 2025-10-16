@@ -27,6 +27,7 @@ zmodule Aloxaf/fzf-tab
 #
 # Prompt
 #
+zmodule sindresorhus/pure --source async.zsh --source pure.zsh
 
 # # Exposes to prompts how long the last command took to execute, used by asciiship.
 # zmodule duration-info
@@ -35,7 +36,7 @@ zmodule Aloxaf/fzf-tab
 # # A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
 # zmodule asciiship
 
-zmodule spaceship-prompt/spaceship-prompt --name spaceship --no-submodules
+# zmodule spaceship-prompt/spaceship-prompt --name spaceship --no-submodules
 
 #
 # Completion

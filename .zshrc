@@ -7,9 +7,11 @@
 # Zsh configuration
 # -----------------
 
-if [[ ! $TMUX ]]; then
-  tmux new -A -s home
-fi
+# eval "$(starship init zsh)"
+
+# if [[ ! $TMUX ]]; then
+#   tmux new -A -s home
+# fi
 
 #
 # Path
@@ -149,3 +151,6 @@ unset key
 # ------------------------------
 # Post-init module configuration
 # ------------------------------
+PURE_PROMPT_SYMBOL='➜'
+zstyle ':prompt:pure:prompt:success' color green
+zstyle ':prompt:pure:prompt:error' color red
