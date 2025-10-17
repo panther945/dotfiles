@@ -4,7 +4,7 @@ end
 
 if status is-interactive
     set fish_tmux_default_session_name home
-    set fish_tmux_autostart false
+    set fish_tmux_autostart true
 end
 
 # hydro
@@ -16,7 +16,7 @@ end
 # set -g hydro_symbol_prompt "❯❯"
 # set -g hydro_cmd_duration_threshold 5000
 
-set -g fish_transient_prompt 1
+# set -g fish_transient_prompt 1
 
 set --universal pure_check_for_new_release false
 set -g async_prompt_functions _pure_prompt_git
@@ -37,23 +37,6 @@ set -x -U GOPATH $HOME/go
 # set -x PATH $PATH $GOPATH/bin
 
 fish_add_path ~/.local/bin ~/.local/scripts ~/.nbgos/bin $GOPATH/bin
-
-# a called to `_pure_prompt_new_line` is triggered by an event
-function fish_prompt
-    set --local exit_code $status # save previous exit code
-
-    if not contains -- --final-rendering $argv
-        # else
-        _pure_print_prompt_rows # manage default vs. compact prompt
-        _pure_place_iterm2_prompt_mark # place iTerm shell integration mark
-        # echo -e -n (_pure_prompt $exit_code) # print prompt
-        # echo -e -n (_pure_prompt_ending) # reset colors and end prompt
-    end
-
-    echo -e -n (_pure_prompt $exit_code) # print prompt
-    echo -e -n (_pure_prompt_ending) # reset colors and end prompt
-    # set _pure_fresh_session false
-end
 
 # Functions needed for !! and !$ https://github.com/oh-my-fish/plugin-bang-bang
 function __history_previous_command

@@ -1,0 +1,7 @@
+new_tab Gemini
+cd ~/Work
+launch --title "Gemini"
+
+new_tab Work
+cd ~/Work
+launch --title "Work" zsh -il -c nvim
