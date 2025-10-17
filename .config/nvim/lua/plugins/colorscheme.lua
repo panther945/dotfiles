@@ -10,12 +10,7 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     opts = {
-      integrations = {
-        telescope = {
-          enabled = true,
-          style = "nvchad",
-        },
-      },
+      transparent_background = true,
     },
   },
 }
