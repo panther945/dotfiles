@@ -6,17 +6,14 @@
   },
   "context": {
     "fileName": [
-      "AGENTS.md",
-      "GEMINI.md"
+      "GEMINI.md",
+      "AGENTS.md"
     ]
   },
   "general": {
     "preferredEditor": "neovim"
   },
   "mcpServers": {
-    "svelte": {
-      "httpUrl": "https://mcp.svelte.dev/mcp"
-    },
     "MCP_DOCKER": {
       "command": "docker",
       "args": [
